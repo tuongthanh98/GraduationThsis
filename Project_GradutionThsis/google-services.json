@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "566546671129",
+    "project_id": "gradution-thsis",
+    "storage_bucket": "gradution-thsis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566546671129:android:dae35a874af0419fedac88",
+        "android_client_info": {
+          "package_name": "com.example.gradutionthsis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566546671129-v45s6gu48hji3pelmbjd82kkpu28jo7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gradutionthsis",
+            "certificate_hash": "6b71e8a7efd07b37e6efc423b6a93a5484adce0d"
+          }
+        },
+        {
+          "client_id": "566546671129-bq4q025tgduv5k5tdpc1cdtk5rqtjpen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHJfjz69kHUg9yLeCRTTrbAcuTYKF54SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566546671129-bq4q025tgduv5k5tdpc1cdtk5rqtjpen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

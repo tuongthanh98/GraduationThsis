@@ -1,0 +1,93 @@
+[
+  {
+    "vaccination": "Lao",
+    "vaccineName": "Vaccine BCG (Việt Nam)",
+    "disease": "\tMỗi năm trên thế giới có hơn 1 triệu người tử vong do bệnh Lao. Căn bệnh này được xếp vào top 10 căn bệnh truyền nhiễm nguy hiểm và gây tử vong nhiều nhất hiện nay.\n\tBệnh Lao phổi thường gặp nhất với những triệu chứng như ho liên tục kéo dài không khỏi, sốt cao, đau ngực, khó thở… Bệnh nhân nếu như không được phát hiện và điều trị điều trị kịp thời dễ gặp các biến chứng đe dọa trực tiếp đến sức khỏe cũng như là tính mạng như: ho ra máu, tràn khí màng phổi, suy hô hấp, giãn phế quản, u nấm phổi…",
+    "description": "Lịch tiêm chủng:\n\t• Vắc xin BCG được chỉ định tiêm cho trẻ trong vòng 30 ngày sau khi sinh và càng sớm càng tốt.\n\t• Vắc xin BCG chỉ tiêm một liều duy nhất, không cần tiêm nhắc lại.",
+    "note": "Tác dụng không mong muốn:\n\t• Phần lớn trẻ em đều có phản ứng tại vết tiêm, thông thường ngay sau khi tiêm BCG sẽ xuất hiện một nốt nhỏ tại chỗ tiêm và biến mất sau khoảng 30 phút. Sau khoảng 2 tuần sẽ xuất hiện một vết loét đỏ có kích thước bằng đầu bút chì. Sau đó 2 tuần vết loét tự lành tạo nên một vết sẹo nhỏ có đường kính 5mm.\nCác phản ứng có thể gặp như áp xe, nổi hạch nách thường do sử dụng bơm tiêm không vô trùng, tiêm quá nhiều hay tiêm không đúng kỹ thuật.\n\t• Các phản ứng nặng khi tiêm BCG thường rất ít gặp, chỉ có 1/1.000.000 người bị nhiễm lao sau khi tiêm BCG, hay xảy ra ở những trường hợp nhiễm HIV hoặc suy giảm miễn dịch mắc phải."
+  },
+  {
+    "vaccination": "Viêm gan B",
+    "vaccineName": "Có thể là một trong 3 tên sau: \n\t• Euvax B 0.5ml (Hàn Quốc) \n\t• Engerix B 0,5ml (Bỉ)\n\t• Hepavax Gene 0.5ml (Hàn Quốc)",
+    "disease": "\tViêm gan B là bệnh truyền nhiễm gây ra bởi virus viêm gan B (Hepatitis virus B), được mệnh danh là “kẻ giết người thầm lặng”. Người nhiễm virus viêm gan B chịu ảnh hưởng lớn đến hoạt động của gan, có thể gây nhiễm trùng gan thậm chí đe dọa đến tính mạng.\n\tHiện nay, virus viêm gan B vẫn là mối đe dọa lớn đến sức khỏe toàn cầu, là nguyên nhân dẫn đến suy gan, xơ gan, ung thư gan. Virus viêm gan B có thể tồn tại trong máu và các chất dịch khác của người bệnh gây ra tình trạng viêm gan B cấp và mạn tính. Khi đó, người bệnh buộc phải chấp nhận sống chung với virus viêm gan B suốt đời.\n\tTheo thống kê của Tổ chức Y tế Thế giới (WHO), có khoảng 400 triệu người trên thế giới mắc viêm gan B mạn tính. Ở Việt Nam hiện nay số người nhiễm virus viêm gan b chiếm khoảng 20% dân số.",
+    "description": "Lịch tiêm chủng vắc xin phòng viêm gan B cho trẻ sơ sinh:\n\t• Mũi 1: lần đầu đến tiêm. (Với trẻ sơ sinh là tháng đầu tiên sau khi sinh)\n\t• Mũi 2: sau mũi 1 một tháng\n\t• Mũi 3: sau mũi 2 một tháng\n\t• Mũi 4 sau mũi 1 mười hai tháng",
+    "note": "Tác dụng không mong muốn\n\t• Phản ứng tại chỗ tiêm: đau, đỏ,, chai cứng chỗ tiêm.\n\t• Phản ứng toàn thân: mệt mỏi, sốt,, nhức đầu, chóng mặt, buồn nôn, tiêu chảy, đau bụng…"
+  },
+  {
+    "vaccination": "Bạch hầu - Ho gà- Uốn ván - Bại liệt - Hib",
+    "vaccineName": "Có thể là một trong 3 tên sau: \n\t• Hexaxim (6in1) \n\t• Infanrix Hexa (6in1) \n\t• Pentaxim (5in1) ",
+    "disease": "\tBệnh bạch hầu, ho gà, uốn ván, bại liệt và viêm phổi, viêm màng não do vi khuẩn Hib có thể tái đi tái lại nhiều lần do cơ thể sẽ không thể tự sinh ra kháng thể miễn dịch tự nhiên sau khi bị mắc bệnh. Bệnh có khả năng gây tử vong cao hoặc để lại những di chứng nặng nề như tàn tật, di chứng thần kinh, tổn thương não…\n\tTheo Tổ chức Y tế Thế giới (WHO), bạch hầu, ho gà, uốn ván, bại liệt và viêm phổi, viêm màng não do vi khuẩn Hib là 5 bệnh trẻ dễ mắc phải – đặc biệt trong những tháng đầu đời, có thể để lại hậu quả vô cùng nặng nề như suy dinh dưỡng, chậm phát triển về trí tuệ, tiếp thu kém, thậm chí tử vong.",
+    "description": "Cho trẻ từ 2 tháng tuổi trở lên\n\tLịch tiêm 4 mũi:\n\t• Mũi 1,2,3: khi trẻ 2,3,4 tháng tuổi hoặc 2,4,6 tháng tuổi.\n\t• Mũi 4: khi trẻ 15 – 18 tháng tuổi",
+    "note": "Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: sưng đỏ, đau từ 1 – 3 ngày. Có thể nổi cục cứng sau khoảng 1-3 tuần sẽ tự khỏi\n\t• Toàn thân: Trẻ có thể sốt, quấy khóc, nôn, tiêu chảy, bú kém."
+  },
+  {
+    "vaccination": "Tiêu chảy do Rota Virus",
+    "vaccineName": "Có thể là 1 trong 3 tên sau: \n\t• Rotateq (Mỹ) \n\t• Rotarix (Bỉ)\n\t• Rotavin (Việt Nam)",
+    "disease": "\tTiêu chảy cấp do virus Rota là bệnh cấp tính do virus gây nên. Bệnh thường gặp ở trẻ nhỏ với biểu hiện: nôn ói, đi ngoài phân lỏng, đau bụng, dẫn tới mất nước, rối loạn điện giải gây trụy mạch và tử vong nhanh.\n\tTheo thống kê, hàng năm trên thế giới có khoảng 1,5 tỷ lượt trẻ dưới 5 tuổi mắc tiêu chảy và 4 triệu trẻ chết vì bệnh này, trong đó 80% xảy ra ở trẻ dưới 2 tuổi.\n\tTại Việt Nam, có đến 56% trẻ nhập viện do viêm dạ dày ruột là do nhiễm virus Rota, trong đó, số trẻ chết do vi rút Rota chiếm từ 4-8% trong tổng số trẻ dưới 5 tuổi bị chết vì mọi nguyên nhân.",
+    "description": "Vắc xin Rotavin-M1 gồm 2 liều:\n\t• Liều thứ 1: Bắt đầu khi trẻ được 6 tuần tuổi.\n\t• Liều thứ 2: Sau liều đầu tiên từ 1-2 tháng.",
+    "note": "Tác dụng không mong muốn:\n\t• Toàn thân: rối loạn tiêu hóa và thường tự khỏi sau vài ngày. \n\t• Nếu đi ngoài phân nước nhiều lần, nôn nhiều, có dấu hiệu mất nước nên khám lại ngay tại cơ sở y tế."
+  },
+  {
+    "vaccination": "Cúm",
+    "vaccineName": "Có thể là 1 trong 2 tên sau:\n\t• Vaxigrip (Pháp) - trẻ em <3 tuổi \n\t• Influvac (Hà Lan) - trẻ em >3 tuổi",
+    "disease": "Theo thống kê, khoảng 10% dân số thế giới (500-800 triệu người) mắc cúm mỗi năm. Trong suốt mùa cúm, có đến 40% trẻ nhỏ và 30% học sinh nhiễm bệnh.\n\tCúm là bệnh truyền nhiễm cấp tính, lây lan nhanh theo đường hô hấp. Một người nhiễm cúm có thể lây nhiễm cho gia đình, những người xung quanh khi ho, hắt hơi và nhanh chóng trở thành dịch nếu không có biện pháp phòng ngừa.\n\tHiện nay, tiêm vắc xin phòng cúm hàng năm là biện pháp hiệu quả, đơn giản và chi phí ít nhất để phòng ngừa cúm.",
+    "description": "Lịch tiêm chủng trẻ từ 6 tháng – 9 tuổi chưa từng tiêm vắc xin cúm:\n\t• Tiêm 2 mũi cách nhau tối thiểu 1 tháng.",
+    "note": "Tác dụng không mong muốn:\n\t•Tại chỗ tiêm: đau, đỏ, sưng \n\t•Toàn thân: đau đầu, sốt, mệt mỏi"
+  },
+  {
+    "vaccination": "Thủy đậu",
+    "vaccineName": "Có thể là 1 trong 3 tên sau: \n\t• Varivax (Mỹ) \n\t• Varilrix (Bỉ)\n\t• Varicella (Hàn Quốc)",
+    "disease": "\tThủy đậu là bệnh truyền nhiễm cấp tính, có thể gây ra nhiều biến chứng nguy hiểm:\n\tCó đến 20% tỷ lệ trẻ tử vong do viêm não biến chứng thủy đậu, nếu may mắn cứu sống, người bệnh cũng có nguy cơ bại não, nằm liệt giường.\n\tKhoảng 30% trẻ sơ sinh tử vong do mắc thủy đậu lây từ mẹ.\n\tTrẻ dưới 3 tháng tuổi hoặc trẻ có hệ miễn dịch yếu, khi mắc bệnh thủy đậu sẽ rất nguy hiểm, khả năng tử vong cao và điều trị tốn kém.\n\tPhụ nữ mang thai, đặc biệt trong khoảng 13-20 tuần, mắc thủy đậu có thể dẫn đến sảy thai hoặc để lại dị tật cho thai nhi (dị dạng ở sọ, đa dị tật ở tim, trẻ sơ sinh mắc chứng đầu nhỏ…).",
+    "description": "Cho trẻ từ 12 tháng tuổi và người lớn chưa từng mắc bệnh. Lịch tiêm cho trẻ từ 12 tháng tuổi đến 12 tuổi: \n\t•  Tiêm 2 mũi cách nhau ít nhất 3 tháng",
+    "note": "Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: phát ban dạng thủy đậu, đau, đỏ, sưng \n\t• Toàn thân: sốtThận trọng: tránh dùng chế phẩm chứa salicylate (thuốc aspirin hoặc các chế phẩm bôi, dán giảm đau) trong ít nhất 6 tuần sau tiêm."
+  },
+  {
+    "vaccination": "Sởi, quai bị, Rubella",
+    "vaccineName": "MMR II",
+    "disease": "\tSởi, quai bị, rubella đều là dẫn căn bệnh rất dễ lây qua đường hô hấp nếu chưa có kháng thể phòng bệnh. Bệnh lây lan nhanh và để lại nhiều biến chứng nguy hiểm, ảnh hưởng đến tính mạng. Phụ nữ mang thai bị nhiễm bệnh có nguy cơ gây dị tật bẩm sinh cho thai nhi, sinh non hoặc thai chết lưu.\n\tBệnh sởi gây ra phát ban toàn thân, ho khan kéo dài, sốt, chảy nước mũi, sưng mí mắt… Bệnh có thể dẫn đến viêm phổi, nhiễm trùng tai, động kinh, tổn thương não, thậm chí tử vong.\n\tBệnh quai bị có triệu chứng điển hình là sưng đau vùng mang tai, đau đầu, đau nhức cơ, sốt, khó nhai… Quai bị có thể dẫn đến điếc, viêm màng não, sưng đau tinh hoàn hoặc buồng trứng dẫn đến vô sinh.\n\tBệnh Rubella gây phát ban toàn thân, viêm khớp và sốt nhẹ. Phụ nữ mang thai nhiễm rubella thì trẻ sinh ra có nguy cơ cao mắc Rubella bẩm sinh làm chậm phát triển trí tuệ, và dễ bị dị tật bẩm sinh.",
+    "description": "Lịch tiêm chủng:\n\t• Tiêm chủng mũi đầu tiên cho trẻ vào khoảng từ 12 -15 tháng tuổi hoặc muộn hơn để tránh tương tác với kháng thể của mẹ truyền sang con.\n\t• Mũi tiêm nhắc lại nên được chủng ngừa vào lúc 4-6 tuổi (độ tuổi đi học), hoặc sớm hơn nếu có dịch xảy ra. Mũi tiêm nhắc lại còn có tác dụng tạo ra biến đổi thể dịch cho những trẻ chưa đáp ứng với mũi tiêm lần trước.",
+    "note": "Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: đau tại nơi tiêm trong một thời gian ngắn\n\t• Toàn thân: sốt, mề đay, phát ban nhẹ, buồn nôn, nôn, tiêu chảy"
+  },
+  {
+    "vaccination": "Viêm gan A",
+    "vaccineName": "Có thể 1 trong 2 tên sau: \n\t• Avaxim \n\t• Havax \n\t• Twinrix (Nếu tiêm chung với Viêm gan B)",
+    "disease": "\tNăm 1973, các nhà khoa học đã quan sát được một loại siêu vi gây bệnh tên là siêu vi viêm gan A. Siêu vi viêm gan A có khả năng sống trên những vật dụng khô ráo ở nhiệt độ phòng trong nhiều tuần và bị hủy trong 5 phút ở nhiệt độ sôi. Siêu vi này có thể tồn tại trong sò, ốc, đất cát, nước biển, nước thải… nhiều ngày đến nhiều tuần mà vẫn giữ nguyên tính lây nhiễm của nó.\n\t Viêm gan siêu vi A lây nhiễm qua đường ăn uống, nguồn nước, môi trường sống nên nguy cơ lây bệnh rất dễ dàng. Các nguyên nhân thường gặp: lây nhiễm từ người sang người qua đường tiêu hóa, ăn hải sản không nấu chín, vệ sinh cá nhân không tốt, ăn chung bát đũa, sống đông đúc chật hẹp, môi trường sống ô nhiễm, nguồn nước sinh hoạt không đảm bảo, tiếp xúc với người bị bệnh viêm gan siêu vi A…́.\n\tBệnh viêm gan siêu vi A thường không gây viêm gan mạn tính, do đó ít nguy cơ diễn tiến thành xơ gan, ung thư gan. Tuy nhiên, vẫn có một số ít trường hợp diễn biến sang thể ác tính gây tử vong cho bệnh nhân. Ở người già và người bị các bệnh nền như bệnh gan, suy tim ứ huyết, tiểu đường và thiếu máu, thời gian hồi phục có thể kéo dài hơn và diễn tiến bệnh có thể nặng hơn.\n\tCho đến nay, vẫn chưa có phương pháp điều trị đặc hiệu bệnh viêm gan A, vì thế để tránh lây nhiễm bệnh gan và tổn thương gan, việc tiêm ngừa vắc xin viêm gan A là bước đơn giản và hiệu quả nhất.",
+    "description": "Lịch tiêm chủng:\n\t• Trẻ em trên 12 tháng đến 15 tuổi: Một liều Avaxim 80U/0.5ml. Liều nhắc lại sau 6-18 tháng",
+    "note": "Tác dụng không mong muốn:\n\t• Phản ứng tại chỗ tiêm: Đau tại vết tiêm, đôi khi có quầng đỏ, sưng, nốt cứng\n\t• Phản ứng toàn thân: Sốt nhẹ, đau đầu, đau cơ, mệt mỏi, rối loạn tiêu hóa, phát ban…\n\t• Các tác dụng không mong muốn này đều ở mức nhẹ hoặc vừa phải và sẽ tự khỏi."
+  },
+  {
+    "vaccination": "Viêm não Nhật Bản",
+    "vaccineName": "Jevax (Việt Nam)",
+    "disease": "\tViêm não Nhật Bản là căn bệnh nguy hiểm, rất khó phát hiện do triệu chứng ban đầu rất giống với các bệnh viêm nhiễm khác.\nBệnh viêm não Nhật Bản có thể gây tử vong chỉ trong 24h. Nếu được điều trị kịp thời, bệnh cũng có thể để lại nhiều di chứng nghiêm trọng như như di chứng vận động, thần kinh, hô hấp, có trẻ phải sống nhờ máy móc suốt đời… trở thành gánh nặng cho gia đình và xã hội.",
+    "description": "Lịch cơ bản:\n\t• Mũi 1: là liều đầu tiên khi tiêm.\n\t• Mũi 2: sau mũi 1 khoảng 2 tuần.\n\t• Mũi 3: sau mũi 2 là một năm.\n\t• Sau 3 năm tiêm nhắc lại một liều để duy trì miễn dịch hoặc những người có thể trạng miễn dịch tốt thì tiêm nhắc lại trước khi có dịch viêm não xảy ra.",
+    "note": " Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: đau sưng, đỏ\n\t• Toàn thân: mệt mỏi, đau đầu, sốt"
+  },
+  {
+    "vaccination": "Viêm màng não do não mô cầu BC",
+    "vaccineName": "Mengoc BC (Cu Ba)",
+    "disease": "\tViêm màng não do não mô cầu là bệnh có khả năng gây tử vong cao ngay cả khi được phát hiện sớm và điều trị kịp thời.\n\tKhi biến chứng, viêm màng não do não mô cầu có thể gây nguy hiểm như tăng áp lực nội sọ, phù não, áp xe não gây nhiễm trùng huyết và tử vong.\n\tNhững trường hợp may mắn sống sót có thể mang những di chứng nghiêm trọng cả đời như phải cắt bỏ các chi, các ngón tay, ngón chân, để lại các tổn thương não, giảm thính lực, tổn thương thận và các vấn đề về tâm lý.\n\tHiện nay, việc chủng ngừa bằng vắc xin VA-MENGOC-BC là biện pháp hữu hiệu nhất để phòng ngừa bệnh viêm màng não do não mô cầu – căn bệnh có thể giết chết người khỏe mạnh chỉ sau 24 giờ, ngay khi phát hiện triệu chứng đầu tiên.",
+    "description": "Lịch cơ bản: dành cho trẻ từ 6 tháng trở lên đến người 45 tuổi. Gồm hai mũi tiêm; mũi 2 cách mũi 1 khoảng 6-8 tuần.",
+    "note": "Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: sưng đau, có thể tạo cục cứng, sau khoảng 72 giờ sẽ tự khỏi \n\t• Toàn thân: sốt nhẹ"
+  },
+  {
+    "vaccination": "Viêm màn não viêm phổi do phế cầu",
+    "vaccineName": "Synflorix (Bỉ)",
+    "disease": "\tMỗi năm, các bệnh gây ra do khuẩn phế cầu đang đe dọa tính mạng hàng tỷ người trên thế giới:\n\t• Gần 1 triệu ca tử vong hàng năm ở trẻ dưới 5 tuổi, viêm phổi đang là mối đe dọa lớn trên toàn thế giới.\n\t• 83% trẻ dưới 3 tuổi bị viêm màng não. 50% trong số đó tử vong. 30 – 50% phải chịu đựng những di chứng lâu dài như: điếc, mù, liệt, động kinh, chậm phát triển trí tuệ…\n\t• Hơn 350 triệu ca bệnh viêm tai giữa cấp ở trẻ em dưới 5 tuổi, hơn 1/3 trong số đó bị nhiễm trùng lặp đi lặp lại, phải phẫu thuật.\n\t• Theo Tổ chức Y tế Thế giới (WHO), vắc xin Synflorix ra đời đã giúp ngăn chặn 6-7,5 triệu trường hợp mắc bệnh viêm phổi, viêm màng não, viêm tai giữa do S.Pneumoniae không định tuýp, cứu sống khoảng 290.000 trẻ dưới 5 tuổi trên toàn cầu.",
+    "description": "Lịch tiêm chủng. Cho trẻ từ 2 tháng tuổi trở lên:\n• Lịch tiêm 4 mũi cho trẻ từ 2 – 6 tháng tuổi:\n\t• Mũi 1: lúc 2 tháng tuổi\n\t• Mũi 2: 1 hoặc 2 tháng sau mũi 1\n\t• Mũi 3: 1 hoặc 2 tháng sau mũi 2\n\t• Mũi 4: 6 tháng sau mũi ba",
+    "note": "Tác dụng không mong muốn:\n\t• Tại chỗ tiêm: sưng, đau, đỏ \n\t• Toàn thân: trẻ có thể sốt trên 38°C, ăn uống kém, bị kích thích, quấy khóc"
+  },
+  {
+    "vaccination": "Thương hàn",
+    "vaccineName": "Có thể là một trong 2 tên sau: \n\t• Typhim VI (Pháp) \n\t• Typhoid VI (Việt Nam)",
+    "disease": "\tThương hàn là bệnh truyền nhiễm cấp tính do vi khuẩn Salmonella typhi gây ra. Bệnh dễ dàng lây nhiễm qua đường tiêu hóa và phát triển nhanh thành dịch. Cả trẻ em và người lớn đều có thể trở thành đối tượng mắc bệnh nếu không được phòng bệnh đúng cách.\n\tLà một căn bệnh không được nhiều người quan tâm, tuy nhiên thương hàn lại rất nguy hiểm với các triệu chứng sốt, đau đầu, rối loạn tiêu hóa, chảy máu cam… thậm chí nếu bệnh trở nặng có thể dẫn đến tử vong với các biến chứng nguy hiểm như: thủng ruột non, xuất huyết tiêu hóa, viêm túi mật, viêm não…",
+    "description": "Trẻ em trên 2 tuổi và người lớn tiêm 1 mũi duy nhất và nhắc lại sau mỗi 3 năm nếu có nguy cơ.",
+    "note": "Tác dụng không mong muốn:\n\t• Phản ứng thường nhẹ, nhanh chóng biến mất. Khi tiêm vắc xin, tại chỗ tiêm có thể sưng đỏ. Có triệu chứng sốt nhẹ và sẽ hết sau 24h kể từ khi tiêm vắc xin.\n\t• Hiếm gặp phản ứng phản vệ."
+  },
+  {
+    "vaccination": "Bệnh tả",
+    "vaccineName": "mORCVAX (Việt Nam)",
+    "disease": "\tBệnh tả là bệnh truyền nhiễm cấp tính do vi khuẩn tả Vibrio cholerae gây nên. Trên thế giới mỗi năm có từ 1,3 – 4 triệu trường hợp mắc bệnh tả, trong đó khoảng 21.000 – 143.000 trường hợp tử vong.\nKhi tiếp xúc với nguồn nước nhiễm khuẩn, trẻ em rất dễ mắc tả, dấu hiệu ban đầu có thể gặp ở trẻ là sốt, đau bụng kèm đi phân lỏng… Khi bệnh trở nặng sẽ khiến da trẻ bị khô, môi khô, mắt lờ đờ thậm chí có thể co giật, hôn mê. Nếu bệnh không được phát hiện và điều trị kịp thời, tình trạng tiêu chảy kéo dài sẽ khiến trẻ mất sức do mất nước nặng dẫn đến hiện tượng hạ đường huyết, thậm chí gây tử vong.\nBệnh tả ở trẻ tuy nguy hiểm nhưng hoàn toàn có thể phòng ngừa bằng vắc xin.",
+    "description": "Lịch tiêm chủng:\n\t• Lịch cơ bản: Gồm 2 liều – dành cho người lớn và trẻ em từ 2 tuổi trở lên. Liều thứ 2 cách liều thứ nhất tối thiểu 2 tuần (14 ngày)\n\t• Lịch nhắc lại: Uống lặp lại sau lịch uống cơ bản 2 năm hoặc trước mỗi mùa dịch tả. Phác đồ uống 2 liều, khoảng cách giữa 2 liều tối thiểu là 2 tuần (14 ngày).",
+    "note": "Tác dụng không mong muốn:\n\t• Thường gặp: Sau khi uống vắc xin có thể có cảm giác buồn nôn hoặc nôn ói…\n\t• Hiếm gặp: Đau đầu, đau bụng, tiêu chảy, sốt, tuy nhiên những triệu chứng này sẽ tự khỏi mà không cần điều trị."
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "injectionMonth": 0,
+    "injectionName": "Mũi số 1/1",
+    "distance": 0,
+    "idVaccine": "1"
+  },
+  {
+    "injectionMonth": 0,
+    "injectionName": "Mũi số 1/5",
+    "distance": 0,
+    "idVaccine": "2"
+  },
+  {
+    "injectionMonth": 1,
+    "injectionName": "Mũi số 2/5",
+    "distance": 1,
+    "idVaccine": "2"
+  },
+  {
+    "injectionMonth": 2,
+    "injectionName": "Mũi số 3/5",
+    "distance": 1,
+    "idVaccine": "2"
+  },
+  {
+    "injectionMonth": 3,
+    "injectionName": "Mũi số 4/5",
+    "distance": 1,
+    "idVaccine": "2"
+  },
+  {
+    "injectionMonth": 17,
+    "injectionName": "Mũi số 5/5",
+    "distance": 14,
+    "idVaccine": "2"
+  },
+  {
+    "injectionMonth": 1,
+    "injectionName": "Mũi số 1/4",
+    "distance": 0,
+    "idVaccine": "3"
+  },
+  {
+    "injectionMonth": 2,
+    "injectionName": "Mũi số 2/4",
+    "distance": 1,
+    "idVaccine": "3"
+  },
+  {
+    "injectionMonth": 3,
+    "injectionName": "Mũi số 3/4",
+    "distance": 1,
+    "idVaccine": "3"
+  },
+  {
+    "injectionMonth": 17,
+    "injectionName": "Mũi số 4/4",
+    "distance": 15,
+    "idVaccine": "3"
+  },
+  {
+    "injectionMonth": 1,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "4"
+  },
+  {
+    "injectionMonth": 2,
+    "injectionName": "Mũi số 2/2",
+    "distance": 1,
+    "idVaccine": "4"
+  },
+  {
+    "injectionMonth": 5,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "5"
+  },
+  {
+    "injectionMonth": 6,
+    "injectionName": "Mũi số 2/2",
+    "distance": 1,
+    "idVaccine": "5"
+  },
+  {
+    "injectionMonth": 11,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "6"
+  },
+  {
+    "injectionMonth": 14,
+    "injectionName": "Mũi số 2/2",
+    "distance": 3,
+    "idVaccine": "6"
+  },
+  {
+    "injectionMonth": 11,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "7"
+  },
+  {
+    "injectionMonth": 23,
+    "injectionName": "Mũi số 2/2",
+    "distance": 12,
+    "idVaccine": "7"
+  },
+  {
+    "injectionMonth": 11,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "8"
+  },
+  {
+    "injectionMonth": 17,
+    "injectionName": "Mũi số 2/2",
+    "distance": 6,
+    "idVaccine": "8"
+  },
+  {
+    "injectionMonth": 11,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "9"
+  },
+  {
+    "injectionMonth": 23,
+    "injectionName": "Mũi số 2/2",
+    "distance": 12,
+    "idVaccine": "9"
+  },
+  {
+    "injectionMonth": 5,
+    "injectionName": "Mũi số 1/2",
+    "distance": 0,
+    "idVaccine": "10"
+  },
+  {
+    "injectionMonth": 6,
+    "injectionName": "Mũi số 2/2",
+    "distance": 1,
+    "idVaccine": "10"
+  },
+  {
+    "injectionMonth": 1,
+    "injectionName": "Mũi số 1/4",
+    "distance": 0,
+    "idVaccine": "11"
+  },
+  {
+    "injectionMonth": 2,
+    "injectionName": "Mũi số 2/4",
+    "distance": 1,
+    "idVaccine": "11"
+  },
+  {
+    "injectionMonth": 3,
+    "injectionName": "Mũi số 3/4",
+    "distance": 1,
+    "idVaccine": "11"
+  },
+  {
+    "injectionMonth": 9,
+    "injectionName": "Mũi số 4/4",
+    "distance": 6,
+    "idVaccine": "11"
+  },
+  {
+    "injectionMonth": 24,
+    "injectionName": "Mũi số 1/1",
+    "distance": 0,
+    "idVaccine": "12"
+  }
+]

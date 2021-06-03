@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/iHealth"
+        android:icon="@drawable/outline_health_and_safety_24"
+        android:iconTint="@color/black"
+        android:title="@string/monitor_health_at_home"
+        app:showAsAction="always"
+        tools:targetApi="o" />
+</menu>

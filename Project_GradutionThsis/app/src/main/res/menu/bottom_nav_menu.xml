@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:enabled="true"
+        android:icon="@drawable/outline_child_care_black_18"
+        android:title="@string/relative" />
+    <item
+        android:id="@+id/navigation_vaccine"
+        android:enabled="true"
+        android:icon="@drawable/outline_toc_black_18"
+        android:title="@string/vaccine" />
+    <item
+        android:id="@+id/navigation_home"
+        android:enabled="true"
+        android:icon="@drawable/outline_assignment_black_18"
+        android:title="@string/regulation" />
+    <item
+        android:id="@+id/navigation_schedule"
+        android:enabled="true"
+        android:icon="@drawable/outline_settings_black_18"
+        android:title="@string/settings" />
+</menu>

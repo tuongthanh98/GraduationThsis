@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_view"
+    app:startDestination="@+id/homeFragment">
+    <fragment
+        android:id="@+id/vaccineFragment"
+        android:name="com.example.gradutionthsis.fragments.VaccineFragment"
+        android:label="fragment_vaccine"
+        tools:layout="@layout/fragment_vaccine" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.gradutionthsis.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gradutionthsis.fragments.RegulationFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_regulation" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.gradutionthsis.fragments.SettingFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

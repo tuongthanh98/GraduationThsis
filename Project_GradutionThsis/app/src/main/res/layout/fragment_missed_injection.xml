@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MissedInjectionFragment">
+
+    <TextView
+        android:id="@+id/textMissInjection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/unmiss"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/red"
+        />
+
+    <ExpandableListView
+        android:id="@+id/expand_injected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

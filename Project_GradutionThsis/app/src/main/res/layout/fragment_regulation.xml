@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegulationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_regulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/regulation"
+            android:textColor="@color/red"
+            android:textSize="27sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_regulation"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Thông tư 34/2018/TT-BYT của Bộ Y tế, ban hành ngày 16/11/2018 quy định chi tiết một số điều của Nghị định số 104/2018/NĐ-CP ngày 01 tháng 7 năm 2016 của Chính phủ quy định về hoạt động tiêm chủng, bao gồm các nội dung chính:"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1. Quy định về cấp phát, tiếp nhận vắc xin"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="2. Bảo quản vắc xin và dung môi trong thiết bị dây chuyền lạnh"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="3. Bảo quản vắc xin trong buổi tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="4.  Vận chuyển vắc xin"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_6"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="5. Bảo dưỡng thiết bị dây chuyền lạnh, giám sát việc bảo quản vắc xin trong dây chuyền lạnh"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_7"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="6. Bố trí, sắp xếp tại điểm tiêm chủng cố định và điểm tiêm chủng lưu động"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_8"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="7. Khám sàng lọc và tư vấn trước tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_9"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="8. Thực hiện tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="9. Theo dõi sau tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_11"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="10. Tổ chức chiến dịch tiêm chủng và tiêm chủng tại nhà"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_12"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="11. Phát hiện, xử trí và báo cáo tai biến nặng sau tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_13"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="12. Điều tra tai biến nặng sau tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_14"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="13. Đánh giá nguyên nhân tai biến nặng sau tiêm chủng"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_15"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Thông tư này có hiệu lực kể từ ngày 01/01/2019"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</FrameLayout>

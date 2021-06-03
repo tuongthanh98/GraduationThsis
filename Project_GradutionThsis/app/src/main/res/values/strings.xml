@@ -1,0 +1,237 @@
+<resources>
+    <string name="app_name">GradutionThsis</string>
+    <string name="send">Send</string>
+    <string name="received">Received</string>
+    <string name="otp_verification">OTP Veritifycation</string>
+    <string name="string_title_otp">We will send you one time</string>
+
+
+    <!-- Các nút -->
+    <string name="add">Thêm</string>                <!-- Thêm -->
+    <string name="delete">Xóa</string>              <!-- Xóa -->
+    <string name="edit">Sửa</string>                <!-- Sửa -->
+    <string name="search">Tìm kiếm</string>         <!-- Tìm kiếm -->
+    <string name="close">Đóng</string>              <!-- Đóng -->
+    <string name="back">Quay lại</string>           <!-- Quay lại -->
+    <string name="next">Kế tiếp</string>            <!-- Kế tiếp -->
+    <string name="save">Lưu</string>                <!-- Lưu lại -->
+    <string name="sign_in">Đăng nhập</string>       <!-- Đăng nhập -->
+    <string name="sign_up">Đăng xuất</string>       <!-- Đăng ký -->
+    <string name="statistical">Thống kê</string>    <!-- Thống kê -->
+
+    <string name="vaccine">Vaccine</string>     <!--Vaccine -->
+    <string name="injections">Mũi tiêm</string> <!-- Injections -->
+    <string name="name">Tên</string>            <!-- Tên -->
+    <string name="describe">Mô tả</string>      <!-- Mô tả -->
+    <string name="price">Giá</string>           <!-- Giá | Kiểm tra thuộc tính nên có không?????-->
+
+    <string name="add_new_relative">Thêm mới trẻ em</string>
+
+    <string name="relative">Trẻ em</string>      <!-- Thân nhân/Họ hàng/Trẻ em -->
+    <string name="full_name">Họ tên</string>        <!-- Họ tên -->
+    <string name="gender">Giới tính</string>        <!-- Giới tính -->
+    <string name="male">Nam</string>                <!-- Nam -->
+    <string name="female">Nữ</string>               <!-- Nữ -->
+    <string name="nick_name">Tên ở nhà</string>     <!-- Tên ở nhà -->
+    <string name="birth_date">Ngày sinh</string>    <!-- Ngày Sinh -->
+    <string name="barcode">Mã vạch</string>         <!-- Mã vạch -->
+    <string name="avatar">Avatar</string>           <!-- Hình đại diện -->
+
+
+    <string name="information_to_measure_the_child">Thông tin cân đo của trẻ</string> <!-- Thông tin cân đo của trẻ -->
+    <string name="weight">Cân nặng (kg): </string>       <!-- Cân nặng -->
+    <string name="height">Chiều cao (cm): </string>       <!-- Chiều cao -->
+    <string name="time">Ngày: </string>                   <!-- Ngày nhập sức khỏe -->
+
+
+    <string name="user">User</string>                   <!-- Người dùng -->
+    <string name="address">Address</string>             <!-- Địa chỉ -->
+    <string name="email">Email</string>                 <!-- Địa chỉ email -->
+    <string name="phone_number">Phone number</string>   <!-- Số điện thoại -->
+    <string name="identity_card">Identity card</string> <!-- Chứng minh nhân dân -->
+
+
+    <string name="vaccination_schedule">Lịch tiêm chủng</string>      <!-- Lịch tiêm chủng -->
+    <string name="schedule">Lịch</string>                       <!-- Lịch -->
+    <string name="date_of_injection">Ngày tiêm</string>         <!-- Ngày tiêm -->
+    <string name="number_of_injections">Số lần tiêm</string>    <!-- Số lần tiêm -->
+    <string name="status">Trạng thái</string>                   <!-- Tình trạng -->
+    <string name="note">Ghi chú</string>                        <!-- Ghi chú -->
+    <string name="injection_detail">Chi tiết mũi tiêm</string>                        <!-- Ghi chú -->
+
+
+    <string name="news">News</string>                                                                       <!-- Tin tức -->
+    <string name="utilities">Utilities</string>                                                             <!-- Tiện ích -->
+    <string name="immunization_information">Immunization information</string>                               <!-- Thông tin tiêm chủng -->
+    <string name="weight_history_height">Weight history height</string>                                     <!-- Lịch sử cân nặng chiều cao -->
+    <string name="monitor_health_at_home">Theo dõi sức khỏe tại gia đình</string>                           <!-- Theo dõi sức khỏe tại gia đình -->
+    <string name="monitor_health_at_medical_facilities">Health monitoring at medical facilities</string>    <!-- Theo dõi sức khỏe tại cơ sở y tế -->
+    <string name="immunization_for_children">Immunization for children</string>                             <!-- Tiêm chủng cho trẻ em -->
+
+    <string name="_84">+84- </string>
+    <string name="hint_mobile">1234567890</string>
+    <string name="your_mobile">Enter your phone number</string>         <!-- Nhập số điện thoại của bạn -->
+    <string name="get_otp">Get OTP</string>                             <!-- Lấy OTP -->
+    <string name="enter_otp">Enter the OTP send to</string>             <!-- Nhập OTP -->
+    <string name="revceive_the_otp">Didn\'t revceive the OTP</string>   <!-- Không nhận được OTP -->
+    <string name="resend_otp">Resend OTP</string>                       <!-- Gửi lại OTP -->
+
+
+    <string name="log_out">Log out</string>     <!-- Đăng xuất -->
+    <string name="login">Login</string>         <!-- Đăng nhập -->
+    <string name="password">Password:</string>  <!-- Mật khẩu -->
+    <string name="choose_an_action">Choose an action!</string><!-- Chọn tác vụ! -->
+
+    <string name="settings">Cài đặt</string>                        <!-- Cài đặt -->
+    <string name="setting_notification">Cài đặt thông báo</string>  <!-- Cài đặt thông báo -->
+    <string name="notification">Thông báo</string>                  <!-- Cài đặt thông báo -->
+    <string name="information_note">Thông tin lưu lý</string>       <!-- Thông tin lưu lý -->
+    <string name="app_review">Đánh giá ứng dụng</string>            <!-- Đánh giá ứng dụng -->
+
+
+    <string name="hint_full_name">Nguyễn Văn A</string>
+    <string name="hint_nick_name">Bi</string>
+    <string name="hint_weight">3.2</string>
+    <string name="hint_height">49.1</string>
+    <string name="hint_birth_date">01/01/2021</string>
+    <string name="add_new">Tạo mới</string>
+    <string name="edit_info">Sửa thông tin</string>
+
+    <string name="immunization_book">Sổ tiêm chủng</string>
+
+    <string name="title_home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weight_of_child">Cân nặng của bé</string>     <!-- Cân nặng của bé -->
+    <string name="height_of_child">Chiều cao của bé</string>    <!-- Chiều cao của bé -->
+
+    <string name="development_process">Danh sách quá trình phát triển của bé</string>   <!-- Danh sách quá trình phát triển của bé -->
+    <string name="add_new_health">Thông tin cân đo của bé</string>                      <!-- Thông tin cân đo của bé -->
+
+
+    <string name="warning">Thông tin lưu ý</string> <!-- Thông tin lưu ý -->
+    <string name="reset">Reset ứng dụng</string>    <!-- Reset ứng dụng -->
+    <string name="content_waring">Mọi thông tin của ứng dụng chỉ mang tính tham khảo. Quý vị cần tham khảo ý kiến trực tiếp của bác sĩ chuyên khoa y tế về tiêm chủng. Chúng tôi không chịu trách nhiệm gì về việc sửa dụng thông tin của quý vị. Xin cảm ơn!</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="content_reset">Tất cả mọi thông tin về sổ tiêm chủng, lịch sử thống kê sẽ bị xóa khỏi ứng dụng. bạn có chắc chắn muốn đặt lại ứng dụng?</string>
+    <string name="yes">Đồng ý</string>
+    <string name="time_notify">Thời điểm: </string>
+    <string name="current_day">Đúng ngày</string>
+    <string name="three_days_before">Trước 3 ngày</string>
+    <string name="exit">Thoát</string>
+    <string name="vaccination">Tiêm phòng</string>
+    <string name="disease">Căn bệnh</string>
+    <string name="vaccineName">Tên vaccine</string>
+    <string name="vaccineInfo">Thông tin vaccine</string>
+    <string name="date_injection">Ngày tiêm:</string>
+
+
+    <string-array name="settings">
+        <item>Reset ứng dụng</item>
+        <item>Cài đặt thông báo</item>
+        <item>Kiến thức về tiêm chủng</item>
+        <item>Thông tin lưu ý</item>
+        <item>Đánh giá ứng dụng</item>
+        <item>Chia sẻ ứng dụng</item>
+    </string-array>
+
+    <string name="age">\t tháng tuổi</string>
+
+    <string-array name="schedule">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>12</item>
+        <item>15</item>
+        <item>24</item>
+    </string-array>
+
+
+    <string name="check_status">Đã tiêm:</string>
+
+    <string name="hint">Kiến thức về tiêm chủng</string>
+
+    <!-- Phân loại vaccine -->
+    <string name="vaccine_classification">
+        Vaccine là một sản phầm sinh hôc nhầm tạo miễn dịch chủ động với một hoặc một số bệnh nào đó. \n
+        Phân loại vaccine là kiến thức cơ bản nhất về tiêm chủng, vì nó chi phối hầu hết các nguyên tắc tiêm chủng. Không phải vaccine nào cũng là "vi trùng sống cả".\n
+        Một nhóm cách tổng quát, vaccine được chia làm 2 nhóm:\n
+        \t 1/ Vaccine sống giảm động lực:\n
+        \t\t\t - Phải nhân đội trong cơ thể mới gây miễn nhiễm dịch, do đó đáp ứng miễn dịch gần giống với miễn bệnh tự nhiên, thường lâu dài \n
+        \t\t\t - Là virus sống nên khó bảo quản hơn. Có thể bị ức chế bởi kháng thể trong máu. \n
+        \t\t\t - Các vaccine sống chủ yêu hiện nay: thủy đậu, sởi, rota, bại liệt, lao,… \n
+        \t 2/ Vaccine bất hoạt:\n
+        \t\t\t - Có thể là vi khuẩn hay virus đã chết (toàn tế bào), nhưng hiện nay đa số chỉ là một thành phần hoặc chất tương tự với thành phần của vi khuẩn (virus). \n
+        \t\t\t - Thường cần phải tiêm 3-5 liều (mũi), hiệu giá kháng thể cũng giảm dần theo thời gian. \n
+        \t\t\t - Vaccine bất hoạt chủ yếu hiện nay là: viêm gan b, uống ván, 5 trong 1 (5in1), 6 trong 1 (6in1),…
+    </string>
+
+    <!-- Những hiểu lầm -->
+    <string name="misunderstandings">
+        1/ Đang mắc bệnh không tiêm ngừa được: Không đúng lắm. \n
+        Ví dụ : Bệnh nhẹ (cảm ho sổ mũi, viêm tai giữa, tiêu chảy nhẹ) không sốt là được tiêm ngừa. Trẻ có bệnh mãn tính (gan, phổi, tim, thận,…) không tự ý tiêm theo lịch mà cần được lấy thông tin từ cơ sở tiêm chủng gần nhất (địa phương). \n
+        2/ Uống kháng sinh không tiêm ngữa được: Sai. Kháng sinh không ảnh hưởng để bất kỳ vaccine nào (cũng có một số trường hợp ngoại lệ). \n
+        3/ Bệnh mới hết không nên tiêm ngừa được: Sai. Giai đoạn bệnh phục hồi KHÔNG ảnh hưởng đến hiệu quả vaccine. \n
+        4/ Sinh non hoặc nhẹ ký không tiêm ngừa được: Sai. Lịch tiêm ngừa là theo tuổi, không theo cân nặng. Trẻ sơ sinh cân nặng nhỏ hơn (dưới) 2kg khi mẹ có viêm gan B vẫn chích viêm gan B, dù hiệu quả kém hơn. trẻ suy dinh dưỡng lại cần được tiêm ngừa hơn. \n
+        5/ Dị ứng không tiêm ngừa được: Không đúng lắm. Với tẻ em bị phản ứng nặng với vaccine thì không tiêm được. Chỉ dị ứng nhẹ hoặc dị ứng với các thứ không có trong vaccine thì vẫn tiêm được. \n
+        6/ Đã mắc bệnh, không cần tiêm ngừa: Đúng một phần. Chỉ có một số ít bệnh siêu vi tạo miễn dịch suốt đời khi mắc bệnh (như: thủy đậu, quai bị,… ). Vẫn có những bệnh cần phải tiêm ngữa sau khi mắc bệnh tự nhiên hoặc khi có một bệnh khác tại cùng một cơ quan (vị trí trong cơ thể). Ví dụ như: bệnh nhân có viêm gan B nên tiêm phòng viêm gan A \n
+        7/ Tiêm trễ lịch thì không còn tác dụng: Sai. Lịch tiêm chủng không cứng nhắc là cố định. Nguyên tắc chung của phòng ngừa là phải ngừa sớm, trước khi có bệnh hay có dịch xảy ra và tiêm càng đúng lịch càng tốt.Tuy nhiên nếu tiêm trễ lịch thì không cần tiêm lại từ đầu (ngoại trừ vaccine dại). Nếu trễ thì cố gắng theo sát lịch để kịp nhưng cũng không thể quá sớm trước tuổi quy định hoặc trước lịch hên được vì vaccine không hiệu quả. \n
+        8/ Không tiêm nhiều vaccine được: SAI. Việc tiêm nhiều vaccine được khuyến khích vì giúp trẻ nhanh chóng có được bảo vệ với nhiệu bệnh. Việc tiêm nhiều mũi trong một buổi tiêm KHÔNG làm tăng tác dụng phụ nặng, dù có thể làm trẻ đạu hơn hoặc sốt nhiều hơn. Vaccine phối hợp như 5 trong 1 (5in1) hay 6 trong 1 (6in1) giúp phòng được nhiều bệnh và cùng lúc giảm được số mũi tiêm.
+    </string>
+
+    <!-- Chăm sóc sau tiêm -->
+    <string name="post_injection_care">
+        - Sau khi tiêm xong, cần ở lại tại nơi tiêm để theo dõi trong 30p. Khi về nha, theo dõi trong 24h. \n
+        - Hai tác dụng ngoài ý muốn thường gặp sau mũi tiêm vaccine là sốt và đau chỗ tiêm. \n
+        - Các việc cần làm để xử lý tác dụng phụ: \n
+        \t 1/ Giảm khó chịu do sốt:\n
+        \t\t\t - Uống nhiều nước. \n
+        \t\t\t - Mặc quần áo mỏng không quấn chặt. \n
+        \t\t\t - Uống thuốc hạ sốt, giảm đau. \n
+        \t 2/ Giảm khó chịu do đau chỗ tiêm:\n
+        \t\t\t - Đắp khăn lạnh, mát, ướt lên chỗ tiêm. \n
+        \t\t\t - Uống thuốc hạ sốt, giảm đau. \n
+        \t\t\t - Nếu đau hơn 48h thì đi khám lại. \n
+        \t 3/ Theo dõi các triệu chứng cần mang trẻ khám lại ngay:\n
+        \t\t\t - Sốt cao hơn 40 độ C (trong 48h đầu). \n
+        \t\t\t - Cơn tái nhợt, ủ rũ, suy nhược nặng (trong 48h đầu). \n
+        \t\t\t - Khóc liên tục hơn 3 giờ (trong 48h đầu). \n
+        \t\t\t - Co giật hoặc run rẫy (trong 3 ngày đầu).
+    </string>
+
+    <!-- Tiêm 2 loại vaccine cùng lúc -->
+    <string name="get_two_vaccines">
+        - Là thực hiện 2 mũi tiêm (hoặc uống) 2 loại vaccine khác nhau trong cùng 1 buổi tiêm, cách nhau 30 phút theo dõi. \n
+        - Được khuyến khích vì có thể bảo vệ nhanh với nhiều bệnh. \n
+        - Tất cả vaccine đề có thể tiêm cùng lúc với một vaccine khác. \n
+        - Nếu KHÔNG tiêm cùng lúc thì tùy theo loại vaccine. \n
+        - Trong trường hợp 2 vaccine cùng phòng ngữa một loại mầm bệnh khác chủng (phế cấu, não mô cầu) có thể cần cách xa nhau hơn. \n
+        - Tóm tắt như sau:. \n
+        \t\t 1/ Hai vaccine sống (như thủy đậu, sởi, quai bị, Rubella): tiêm cùng lúc hoặc cách nhau hơn 4 tuần. Hẹn cách 1 tháng là bình thường. \n
+        \t\t 2/ Hai vaccine bất hoạt (hầu hết là các vaccine còn lại): tiêm cùng lúc hoặc cách bao lâu cũng được. Hẹn cách vài ngày hay một tuần là bình thường. \n
+        \t\t 3/ Một vaccine sống, một vaccine bất hoạt: tiêm cùng lúc hoạt cách nhau bao lâu cũng được. Hẹn cách vài ngày hay một tuần là bình thường. \n
+        \t\t 4/ Hai vaccine uống (Rotavirus, bại liệt): lý tưởng là cách 2 tuần, nhưng uống cùng lúc hay cách bao nhiêu cũng vẫn có hiệu quả. \n
+    </string>
+
+    <string name="pass">Đã qua</string>
+    <string name="uninjected">Chưa tiêm</string>
+    <string name="injected">Đã tiêm</string>
+    <string name="text_unfinished">Chưa có mũi tiêm hoàn tất</string>
+    <string name="unmiss">Không có mũi tiêm bị bỏ lỡ</string>
+    <string name="finish">Đã hoàn tất các mũi tiêm</string>
+    <string name="regulation">Quy định tiêm chủng</string>
+    <string name="rate_app_title">Rate app</string>
+    <string name="rate_app_message">Hãy cho chúng tôi biết thêm thông tin về sự trải nghiệm của bạn!</string>
+    <string name="rate_btn_pos">Đánh giá ngay bây giờ</string>
+    <string name="rate_btn_neg">Nhắc nhở tôi sau</string>
+    <string name="rate_btn_nut">Không, cảm ơn!</string>
+    <string name="ticker_text">a</string>
+    <string name="starting">App is starting</string>
+
+
+</resources>

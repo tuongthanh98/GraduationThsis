@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/design_image_background"
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageAvatar"
+        android:text="@string/hint_full_name"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/textNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFullName"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageAvatar"
+        android:text="@string/hint_nick_name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textNickName"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageAvatar"
+        android:text="@string/gender"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGender"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageAvatar"
+        android:text="@string/hint_birth_date"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3sp"
+        android:orientation="horizontal"
+        tools:ignore="RelativeOverlap">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonEdit"
+            style="@style/Widget.App.Button.OutlinedButton"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="@string/edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:iconSize="15sp"
+            app:icon="@drawable/outline_edit_black_18"
+            app:iconTint="@color/black"
+            tools:ignore="SmallSp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDelete"
+            style="@style/Widget.App.Button.OutlinedButton"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="11sp"
+            app:iconSize="15dp"
+            app:icon="@drawable/outline_delete_black_18"
+            app:iconTint="@color/red"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+</RelativeLayout>

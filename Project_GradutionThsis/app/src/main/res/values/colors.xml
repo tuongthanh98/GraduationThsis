@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#F44336</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#1695FA</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color> <!-- Dải phân cách -->
+
+    <color name="colorPrimary">#7b4bff</color>
+    <color name="colorPrimaryDark">#6539ba</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+
+    <color name="color_seleted_true">#2196F3</color>
+    <color name="color_add_button">#37F821</color>
+
+    <color name="background">@color/divider</color>
+
+    <color name="shrine_pink_900">#311B92</color>
+    <color name="shrine_pink_100">#D1C4E9</color>
+
+    <color name="shrine_gray_100">#F5F5F5</color>
+
+
+
+    <color name="gradient_start">#5770f3</color>
+    <color name="gradient_end">#8e5aeb</color>
+    <color name="profile_desc">#D1D1FF</color>
+    <color name="bg_meta_container">#000000</color>
+    <color name="profile_default_tint">#e0e0e0</color>
+</resources>
