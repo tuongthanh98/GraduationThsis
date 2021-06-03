@@ -13,7 +13,6 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.example.gradutionthsis.AlarmReceiver;
 import com.example.gradutionthsis.DBHelper;
 import com.example.gradutionthsis.MainActivity;
 import com.example.gradutionthsis.R;
@@ -60,7 +59,6 @@ public class MyService extends Service {
                 alarmReceiver = new AlarmReceiver();
                 dbHelper = new DBHelper(getApplicationContext());
 
-
                 notifyDetailSchedule();
                 Log.d("LogService", "run: " + new Date().toString());
                 mHandler.postDelayed(this, 1000);
@@ -104,7 +102,7 @@ public class MyService extends Service {
                         .setTicker(getText(R.string.ticker_text))
                         .setChannelId(CHANNEL_DEFAULT_IMPORTANCE).build();
 
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_DEFAULT_IMPORTANCE, CHANNEL_NAME_SERVICE, NotificationManager.IMPORTANCE_HIGH);
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_DEFAULT_IMPORTANCE, CHANNEL_NAME_SERVICE, NotificationManager.IMPORTANCE_NONE);
 //        notificationChannel.enableVibration(false); //Thiêt lập chế độ rung khi nhận được notification
         notificationManager.createNotificationChannel(notificationChannel);
         // Notification ID cannot be 0.

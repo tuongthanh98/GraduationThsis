@@ -161,26 +161,4 @@ public class AddHealthActivity extends AppCompatActivity {
     }
     // [END insertHealth]
 
-    /**
-     * @param dayBefore Ngày trước đó
-     * @param dayAfter  Ngày sau đó - ngày cập nhật
-     * @author: Nguyễn Thanh Tường
-     * @date 27/05/2021 15h3p
-     */
-    //So sánh 2 ngày
-    //[START compareDate]
-    private int compareDate(String dayBefore, String dayAfter) {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            Date date1 = df.parse(dayBefore);   //Ngày trước đó (Ngày lưu trong SQLite)
-            Date date2 = df.parse(dayAfter);    //Ngày sau đó (Ngày chọn từ txtInjectionTime)
-            if (date1 != null && date2 != null) {
-                return date2.compareTo(date1);  //trả về -1 Nếu date2<date1
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
-    //[END compareDate]
 }

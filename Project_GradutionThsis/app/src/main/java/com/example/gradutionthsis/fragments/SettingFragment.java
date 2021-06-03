@@ -24,6 +24,7 @@ import com.example.gradutionthsis.activity.NotifyActivity;
 import com.example.gradutionthsis.adapter.CustomAdapterString;
 import com.example.gradutionthsis.dto.NotificationTask;
 import com.example.gradutionthsis.dto.Relative;
+import com.example.gradutionthsis.service.MyService;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
@@ -135,6 +136,11 @@ public class SettingFragment extends Fragment {
             setDefaultsForTask();
             deleteRelatives();
             dialog.dismiss();
+
+            //Khởi động lại service
+            Intent intent = new Intent(getContext(), MyService.class);
+            Objects.requireNonNull(getContext(), "null").startService(intent);
+
         });
         builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
         AlertDialog alertDialog = builder.create();

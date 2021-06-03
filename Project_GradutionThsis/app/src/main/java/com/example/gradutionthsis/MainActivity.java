@@ -21,6 +21,7 @@ import com.example.gradutionthsis.fragments.VaccineFragment;
 import com.example.gradutionthsis.fragments.RegulationFragment;
 import com.example.gradutionthsis.fragments.ProfileFragment;
 import com.example.gradutionthsis.fragments.SettingFragment;
+import com.example.gradutionthsis.service.AlarmReceiver;
 import com.example.gradutionthsis.service.MyService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -47,14 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Notification
         alarmReceiver = new AlarmReceiver();
-
-
         dbHelper = new DBHelper(this);
-
-//        if (isCheckedObjectNotifyTask())
-//            if (isCancelAlarm()) {
-//                notifyDetailSchedule();
-//            }
 
         if (isCheckedObjectNotifyTask())
             if (isCancelAlarm()) {
@@ -73,10 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-//        if (isCancelAlarm()) {
-//            notifyDetailSchedule();
-//        }
-
         if (isCancelAlarm()) {
             startService();
         } else {

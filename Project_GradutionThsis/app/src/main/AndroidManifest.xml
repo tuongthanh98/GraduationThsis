@@ -32,7 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.KnowledgeActivity" />
-        <activity android:name=".activity.DetailInjectionActivity" />
+        <activity android:name=".activity.DetailInjectionActivity"
+            android:parentActivityName=".activity.TabRelativeActivity"/>
         <activity android:name=".activity.NotifyActivity" />
         <activity android:name=".activity.EditHealthActivity" />
         <activity android:name=".activity.ListHealthActivity" />
@@ -51,10 +52,10 @@
         <activity
             android:name=".activity.SendOTPActivity"
             android:windowSoftInputMode="adjustResize" /> <!-- Điều chỉnh nhập của bàn phím -->
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <receiver
-            android:name=".AlarmReceiver"
+            android:name=".service.AlarmReceiver"
             android:enabled="true"
             android:exported="true"
             tools:ignore="ExportedReceiver">
