@@ -66,6 +66,8 @@ dependencies {
     //Lottie (dependency)
     def lottieVersion ="3.7.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
+    
+
 
     // noinspection GradleDynamicVersion
     testImplementation 'junit:junit:4.+'

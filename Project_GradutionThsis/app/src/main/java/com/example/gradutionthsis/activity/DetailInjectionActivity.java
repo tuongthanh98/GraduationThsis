@@ -22,6 +22,8 @@ import com.example.gradutionthsis.R;
 import com.example.gradutionthsis.dto.DetailSchedule;
 import com.example.gradutionthsis.dto.Injection;
 import com.example.gradutionthsis.dto.Relative;
+import com.example.gradutionthsis.presenter.DetailScheduleDAO;
+import com.example.gradutionthsis.presenter.DetailSchedulePresenter;
 
 import java.io.Serializable;
 import java.text.ParseException;
@@ -31,7 +33,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class DetailInjectionActivity extends AppCompatActivity {
+public class DetailInjectionActivity extends AppCompatActivity implements DetailScheduleDAO {
     private static final String TAG = DetailInjectionActivity.class.getSimpleName();
 
     public static final int STATUS_CODE = 1;
@@ -41,8 +43,10 @@ public class DetailInjectionActivity extends AppCompatActivity {
     private TextView txtInjectionName, txtVaccineName, txtInjectionTime;
     private CheckBox chkStatus;
 
-    private DBHelper dbHelper;
-    private DetailSchedule detailSchedule;
+    DBHelper dbHelper;
+    DetailSchedule detailSchedule;
+    DetailSchedulePresenter mPresenter;
+
 
     String requestCode;
     Relative relative;
@@ -61,6 +65,9 @@ public class DetailInjectionActivity extends AppCompatActivity {
         }
 
         dbHelper = new DBHelper(this);
+        mPresenter = new DetailSchedulePresenter(this, this);
+
+
         txtInjectionName = findViewById(R.id.textInjectionName);
         txtVaccineName = findViewById(R.id.textVaccineName);
         txtInjectionTime = findViewById(R.id.textInjectionTime);
@@ -86,7 +93,7 @@ public class DetailInjectionActivity extends AppCompatActivity {
             Log.d(TAG, "onCreate: " + detailSchedule.toString());
         }
 
-        if (detailSchedule.getIdRelative() == 0){
+        if (detailSchedule.getIdRelative() == 0) {
             Toast.makeText(this, "Trẻ em không tồn tại!", Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(this, MainActivity.class));
@@ -117,6 +124,7 @@ public class DetailInjectionActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     //Cài đặt sự kiện nút quay lại của thiết bị áp dụng cho API 5 trở lên
     @Override
     public void onBackPressed() {
@@ -124,11 +132,12 @@ public class DetailInjectionActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    private void eventBack(){
+    private void eventBack() {
         finish();
         if (requestCode != null)                                                    // Kiểm tra mã gửi đến nếu != null
             sendObject(dbHelper.getRelativeById(detailSchedule.getIdRelative()));   //Mở TabRelative ứng với relative của DetailInjection hiện tại
     }
+
 
     /**
      * @param object Dữ liệu đối tượng được gửi đi - Data object to be sent
@@ -148,6 +157,7 @@ public class DetailInjectionActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     /**
      * @author: Nguyễn Thanh Tường
      * @date 24/05/2021 : 3h56p
@@ -162,11 +172,9 @@ public class DetailInjectionActivity extends AppCompatActivity {
         if (checkStatusInjectBefore() == 3) {
             //Kiểm tra ngày tiêm và ngày sinh có hợp lệ hay không
             if (compareInjectionTime()) {
-                if (dbHelper.updateDetailSchedule(detailSchedule) > 0) {
-                    Toast.makeText(this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
-                    finish();
-                    return;
-                }
+                mPresenter.updateDetailSchedule(detailSchedule);
+                finish();
+                return;
             } else {
                 Toast.makeText(this, "Ngày tiêm phải bằng hoặc sau ngày sinh!", Toast.LENGTH_SHORT).show();
                 return;
@@ -179,8 +187,7 @@ public class DetailInjectionActivity extends AppCompatActivity {
                 Toast.makeText(this, "Khoảng cách giữa mũi trước và mũi sau là " + injection.getDistance() + " tháng!", Toast.LENGTH_SHORT).show();
                 return;
             } else {
-                dbHelper.updateDetailSchedule(detailSchedule);
-                Toast.makeText(this, "Cập nhật thành công!", Toast.LENGTH_SHORT).show();
+                mPresenter.updateDetailSchedule(detailSchedule);
                 finish();
             }
             return;
@@ -189,11 +196,9 @@ public class DetailInjectionActivity extends AppCompatActivity {
 
         //Kiểm tra khoảng cách giữa 2 mũi tiêm (trước và hiện tại) && kiểm tra trạng thái mũi tiêm trước đó: true && true == 1
         if (checkStatusInjectBefore() == STATUS_CODE) {
-            if (dbHelper.updateDetailSchedule(detailSchedule) > 0) {
-                Toast.makeText(this, "Cập nhật thành Công", Toast.LENGTH_SHORT).show();
-                finish();
-                return;
-            }
+            mPresenter.updateDetailSchedule(detailSchedule);
+            finish();
+            return;
         }
 
         //Kiểm tra khoảng cách giữa 2 mũi tiêm (trước và hiện tại) && kiểm tra trạng thái mũi tiêm trước đó: true && true == 1
@@ -231,7 +236,7 @@ public class DetailInjectionActivity extends AppCompatActivity {
 
     /**
      * @param dayBefore Ngày trước đó
-     * @param dayAfter Ngày sau đó - ngày cập nhật
+     * @param dayAfter  Ngày sau đó - ngày cập nhật
      * @author: Nguyễn Thanh Tường
      * @date 27/05/2021 15h3p
      */
@@ -309,40 +314,6 @@ public class DetailInjectionActivity extends AppCompatActivity {
     }
     //[END checkStatus]
 
-// Cập nhật thời gian cho các mũi tiêm sau đó
-//    private void updateTimeDetails(Injection injection){
-//        List<Injection> injections = dbHelper.getTheSameInjections(injection.getIdVaccine());
-//
-////        for (int i = injections.size() -1 ; i>=0; i--){
-////            int id = injections.get(i).getIdInjection();
-////            int distance = injections.get(i).getDistance();
-////            if (injection.getIdInjection() == id)
-////                return;
-////            DetailSchedule dtAfter = dbHelper.getDetailScheduleById(detailSchedule.getIdRelative(), id);
-////            String newDay = calTime(detailSchedule.getInjectionTime(), -distance);
-//////            Log.d(TAG, "updateTimeDetails: " +  newDay);
-////            dtAfter.setInjectionTime(newDay);
-////            if (dbHelper.updateDetailSchedule(dtAfter) > 0){
-////                Log.d(TAG, "updateTimeDetails: " + dtAfter.toString());
-////            }
-////        }
-//
-//        for (int i =0; i < injections.size(); i++){
-//            int id = injections.get(i).getIdInjection();
-//            int distance = injections.get(i).getDistance();
-//
-//            DetailSchedule dtAfter = dbHelper.getDetailScheduleById(detailSchedule.getIdRelative(), id);
-//            Log.d(TAG, "updateTimeDetails - trước khi update: " + dtAfter.toString());
-//            String newDay = calTime(dtAfter.getInjectionTime(), -distance);
-//            Log.d(TAG, "updateTimeDetails - ngày update: " +  newDay);
-//            dtAfter.setInjectionTime(newDay);
-//            if (dbHelper.updateDetailSchedule(dtAfter) > 0){
-//                Log.d(TAG, "updateTimeDetails - sau khi update: " + dtAfter.toString());
-//            }
-//            injections.remove(i);
-//            i--;
-//        }
-//    }
 
     /**
      * @author: Nguyễn Thanh Tường
@@ -354,8 +325,6 @@ public class DetailInjectionActivity extends AppCompatActivity {
         txtInjectionName.setText(injection.getInjectionName());
         txtVaccineName.setText(dbHelper.getVaccineById(injection.getIdVaccine()).getVaccination());
         txtInjectionTime.setText(detailSchedule.getInjectionTime());
-//        Log.d(TAG, "setTextView: " + txtInjectionTime.getText());
-
         chkStatus.setChecked(detailSchedule.getStatus() != 0);
     }
     //[END setTextView]
@@ -407,6 +376,26 @@ public class DetailInjectionActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void createSuccess() {
+
+    }
+
+    @Override
+    public void createFail() {
+
+    }
+
+    @Override
+    public void updateSuccess() {
+        Toast.makeText(this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void updateFail() {
+        Toast.makeText(this, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
     }
     // [END calTime]
 }

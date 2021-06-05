@@ -12,23 +12,30 @@ import android.view.View;
 
 import com.example.gradutionthsis.dto.Injection;
 import com.example.gradutionthsis.dto.Vaccine;
+import com.example.gradutionthsis.presenter.InjectionDAO;
+import com.example.gradutionthsis.presenter.InjectionPresenter;
+import com.example.gradutionthsis.presenter.VaccineDAO;
+import com.example.gradutionthsis.presenter.VaccinePresenter;
 import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class InitializationActivity extends AppCompatActivity {
+public class InitializationActivity extends AppCompatActivity implements VaccineDAO, InjectionDAO {
     private static final String TAG = InitializationActivity.class.getSimpleName();
     private final Gson gson = new Gson();
-    DBHelper dbHelper;
 
+    VaccinePresenter vaccinePresenter;
+    InjectionPresenter injectionPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initialization);
-        dbHelper = new DBHelper(this);
+
+        vaccinePresenter = new VaccinePresenter(this, this);
+        injectionPresenter = new InjectionPresenter(this, this);
 
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -65,13 +72,12 @@ public class InitializationActivity extends AppCompatActivity {
         if (list.toArray().length != 0)
             Toast.makeText(getContext(), list.toString(), Toast.LENGTH_SHORT).show();*/
 
-        if (dbHelper.getAllVaccines().size() == 0) {
+        if (vaccinePresenter.getAllVaccine()) {
             String json = readStringJson(InitializationActivity.this, R.raw.vaccines);
             if (json != null) {
                 Vaccine[] vaccines = gson.fromJson(json, Vaccine[].class);
                 for (Vaccine vaccine : vaccines)
-                    if (dbHelper.insertVaccine(vaccine) > 0)
-                        Log.d(TAG, "onCreateView: " + "success");
+                    vaccinePresenter.createVaccine(vaccine);
             }
         }
     }
@@ -109,15 +115,24 @@ public class InitializationActivity extends AppCompatActivity {
         if (list.toArray().length != 0)
             Toast.makeText(getContext(), list.toString(), Toast.LENGTH_SHORT).show();*/
 
-        if (dbHelper.getAllInjections().size() == 0) {
+        if (injectionPresenter.getAllInjections()) {
             String json = readStringJson(InitializationActivity.this, R.raw.injections);
             if (json != null) {
                 Injection[] injections = gson.fromJson(json, Injection[].class);
                 for (Injection injection : injections)
-                    if (dbHelper.insertInjection(injection) > 0)
-                        Log.d(TAG, "onCreateView: " + "success");
+                    injectionPresenter.createInjection(injection);
             }
         }
+    }
+
+    @Override
+    public void createSuccess() {
+        Log.d(TAG, "create success!");
+    }
+
+    @Override
+    public void createFail() {
+        Log.d(TAG, "create fail!");
     }
     //[END insertAllInjection]
 }

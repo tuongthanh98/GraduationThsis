@@ -18,25 +18,25 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gradutionthsis.DBHelper;
 import com.example.gradutionthsis.R;
 import com.example.gradutionthsis.dto.Health;
 import com.example.gradutionthsis.dto.Relative;
+import com.example.gradutionthsis.presenter.HealthDAO;
+import com.example.gradutionthsis.presenter.HealthPresenter;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
-public class AddHealthActivity extends AppCompatActivity {
+public class AddHealthActivity extends AppCompatActivity implements HealthDAO {
     private static final String TAG = "HealthActivity";
 
     private TextView txtTime;
     private EditText edtWeight, edtHeight;
     private ProgressBar progressBar;
+
     Relative relative;
-    DBHelper dbHelper;
+    HealthPresenter healthPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class AddHealthActivity extends AppCompatActivity {
             actionBar.setTitle(getResources().getString(R.string.add_new)); //Chỉnh sửa title trên ActionBar
         }
 
-        dbHelper = new DBHelper(this);
+        healthPresenter = new HealthPresenter(this, this);
 
         txtTime = findViewById(R.id.textTime);
         edtWeight = findViewById(R.id.inputWeight);
@@ -141,24 +141,46 @@ public class AddHealthActivity extends AppCompatActivity {
         Health health = new Health();
         relative = reciveObject();  //Gán data vào relative
 
-        if (relative != null) {
-            health.setIdRelative(relative.getIdRelative());
-            health.setWeight(Double.parseDouble(edtWeight.getText().toString().trim()));
-            health.setHeight(Double.parseDouble(edtHeight.getText().toString().trim()));
-            health.setTime(txtTime.getText().toString());
+        health.setWeight(Double.parseDouble(edtWeight.getText().toString().trim()));
+        health.setHeight(Double.parseDouble(edtHeight.getText().toString().trim()));
+        health.setTime(txtTime.getText().toString());
 
-            //Lưu health xuống SQLite
-            if (dbHelper.insertHealth(health) > 0) {
-                Log.d(TAG, "id_relative: " + relative.getIdRelative());
-                Log.i(TAG, "Health' object: " + health.toString());
-                Log.d(TAG, "insertHealth: Success!!!");
-                Toast.makeText(this, "Lưu thành công", Toast.LENGTH_SHORT).show();
-            } else{
-                progressBar.setVisibility(View.INVISIBLE);
-                Log.d(TAG, "insertHealth: Lưu thất bại!!!");
-            }
-        }
+        if (relative != null)
+            healthPresenter.createHealth(health, relative.getIdRelative());
     }
     // [END insertHealth]
+
+
+
+
+    @Override
+    public void createSuccess() {
+        Toast.makeText(this, "Tạo thành công!!!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void createFail() {
+        Toast.makeText(this, "Tạo thất bại!!!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void updateSuccess() {
+
+    }
+
+    @Override
+    public void updateFail() {
+
+    }
+
+    @Override
+    public void deleteSuccess() {
+
+    }
+
+    @Override
+    public void deleteFail() {
+
+    }
 
 }

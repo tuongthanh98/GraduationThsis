@@ -23,25 +23,24 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gradutionthsis.DBHelper;
-import com.example.gradutionthsis.dto.DetailSchedule;
 import com.example.gradutionthsis.dto.Health;
-import com.example.gradutionthsis.dto.Injection;
 import com.example.gradutionthsis.dto.Relative;
 import com.example.gradutionthsis.R;
+import com.example.gradutionthsis.presenter.DetailScheduleDAO;
+import com.example.gradutionthsis.presenter.DetailSchedulePresenter;
+import com.example.gradutionthsis.presenter.HealthDAO;
+import com.example.gradutionthsis.presenter.HealthPresenter;
+import com.example.gradutionthsis.presenter.RelativeDAO;
+import com.example.gradutionthsis.presenter.RelativePresenter;
 
 import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AddRelativeActivity extends AppCompatActivity {
+public class AddRelativeActivity extends AppCompatActivity implements RelativeDAO, HealthDAO, DetailScheduleDAO {
 
     private final static String TAG = "RelativesActivity";
 
@@ -52,8 +51,9 @@ public class AddRelativeActivity extends AppCompatActivity {
     private RadioButton radSelect;
     private ProgressBar progressBar;
 
-    List<Relative> list = new ArrayList<>();
-    DBHelper dbHelper;
+    RelativePresenter relativePresenter;
+    HealthPresenter healthPresenter;
+    DetailSchedulePresenter dsPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,9 @@ public class AddRelativeActivity extends AppCompatActivity {
         @SuppressLint("SimpleDateFormat")
         DateFormat df = new SimpleDateFormat(pattern);
 
-        dbHelper = new DBHelper(this);
+        relativePresenter = new RelativePresenter(this, this);
+        healthPresenter = new HealthPresenter(this, this);
+        dsPresenter = new DetailSchedulePresenter(this, this);
 
         edtFullName = findViewById(R.id.inputFullName);
         edtNickName = findViewById(R.id.inputNickName);
@@ -198,11 +200,7 @@ public class AddRelativeActivity extends AppCompatActivity {
         relative.setBirthDate(txtBirthDate.getText().toString());
         relative.setAvatar(imageViewToByte(ivAvatar));
 
-        if (dbHelper.insertRelative(relative) > 0) {
-            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
-        } else
-            Toast.makeText(this, "Fail!!!", Toast.LENGTH_SHORT).show();
-
+        relativePresenter.create(relative);
     }
     // [END insertRelative]
 
@@ -215,26 +213,15 @@ public class AddRelativeActivity extends AppCompatActivity {
     // [START insertHealth]
     private void insertHealth() {
         Health health = new Health();
+        int id = relativePresenter.getRelativeFinal().getIdRelative();
 
         health.setWeight(Double.parseDouble(edtWeight.getText().toString().trim()));
         health.setHeight(Double.parseDouble(edtHeight.getText().toString().trim()));
         health.setTime(txtBirthDate.getText().toString());
 
-        list = dbHelper.getAllRelatives();  //Lấy ra danh sách trẻ em/thân nhân - Get all relatives
-        Log.i(TAG, "insertHealth: " + list.size());
+        healthPresenter.createHealth(health, id);
 
-        //Lấy vị trí trẻ em cuối cùng trong danh sách - Get relavtive's last position in the list
-        for (int i = list.size() - 1; i >= 0; ) {
-            Relative relative = list.get(i);
-            health.setIdRelative(relative.getIdRelative());  //Đặt id mã trẻ em cho đối tượng sức khỏe - Set idRelative for object's Health
-            Log.i(TAG, "insertHealth: " + relative.getIdRelative());
-            break;
-        }
-        //Lưu health xuống SQLite
-        if (dbHelper.insertHealth(health) > 0) {
-            Log.d(TAG, "insertHealth: Success!!!");
-        } else
-            Log.d(TAG, "insertHealth: Failed!!!");
+
     }
     // [END insertHealth]
 
@@ -246,51 +233,43 @@ public class AddRelativeActivity extends AppCompatActivity {
     //Thêm mũi tiêm trẻ em
     // [START insertInjection]
     private void insertInjection() {
-        List<Injection> injections = dbHelper.getAllInjections(); //list dbHelper
 
-        //Lấy vị trí trẻ em cuối cùng trong danh sách - Get relavtive's last position in the list
-        for (int i = list.size() - 1; i >= 0; ) {
-            Relative relative = list.get(i);
-            for (Injection injection : injections) {
-                String injectionTime = calTime(relative.getBirthDate(), injection.getinjectionMonth()); //Tạo thời gian tiêm phòng (injectionTime)
-                DetailSchedule detailSchedule = new DetailSchedule(relative.getIdRelative(), injection.getIdInjection(), injectionTime, 0, 0);
-                if (dbHelper.insertDetailSchedule(detailSchedule) > 0)
-                    Log.d(TAG, "insertInjection: success!" + detailSchedule.toString());
-            }
-            break;
-        }
+        int id = relativePresenter.getRelativeFinal().getIdRelative();
+        String birthDate = relativePresenter.getRelativeFinal().getBirthDate();
+
+        dsPresenter.createDetailSchedule(id, birthDate);
+
     }
     // [END insertInjection]
 
 
-    /**
-     * @author: Nguyễn Thanh Tường
-     * @date 23/5/2021 16h58p
-     */
-    //Phương thức tính thời gian
-    // [START calTime]
-    private String calTime(String birthDay, int injectionMonth) {
-        String pattern = "dd/MM/yyyy";
-        int month;//Tháng tiêm phòng
-        try {
-            @SuppressLint("SimpleDateFormat")
-            Date date = new SimpleDateFormat(pattern).parse(birthDay);
-            Calendar c = Calendar.getInstance();
-            if (date != null) {
-                c.setTime(date);
-                Log.d(TAG, "calTime: " + c.get(Calendar.MONTH));
-                c.add(Calendar.MONTH, injectionMonth);
-                Log.d(TAG, "Ngày cộng thêm: " + c.get(Calendar.MONTH));
-                month = c.get(Calendar.MONTH) + 1;
-                return (c.get(Calendar.DAY_OF_MONTH) + "/" + month + "/" + c.get(Calendar.YEAR));
-
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return null;
+    @Override
+    public void createSuccess() {
+        Toast.makeText(this, "Thành công!!!", Toast.LENGTH_SHORT).show();
     }
-    // [END calTime]
 
+    @Override
+    public void createFail() {
+        Toast.makeText(this, "Thất bại!!!", Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public void updateSuccess() {
+
+    }
+
+    @Override
+    public void updateFail() {
+
+    }
+
+    @Override
+    public void deleteSuccess() {
+
+    }
+
+    @Override
+    public void deleteFail() {
+
+    }
 }

@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.example.gradutionthsis.DBHelper;
 import com.example.gradutionthsis.R;
 import com.example.gradutionthsis.activity.DetailInjectionActivity;
 import com.example.gradutionthsis.activity.TabRelativeActivity;
 import com.example.gradutionthsis.adapter.CustomAdapterInjection;
 import com.example.gradutionthsis.dto.DetailSchedule;
 import com.example.gradutionthsis.dto.Injection;
+import com.example.gradutionthsis.presenter.DetailSchedulePresenter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class MissedInjectionFragment extends Fragment {
     private Context mContext;
     private TextView txtMissInjection;
     private ExpandableListView expandableListView;
-    private DBHelper dbHelper;
+    DetailSchedulePresenter schedulePresenter;
 
     public MissedInjectionFragment(int idRelative) {
         this.idRelative = idRelative;
@@ -52,8 +52,10 @@ public class MissedInjectionFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_missed_injection, container, false);
         mContext = getActivity();
+
+        schedulePresenter = new DetailSchedulePresenter(getContext());
+
         txtMissInjection = root.findViewById(R.id.textMissInjection);
-        dbHelper = new DBHelper(getContext());
         expandableListView = root.findViewById(R.id.expand_injected);
 
         setExpandList();
@@ -73,7 +75,7 @@ public class MissedInjectionFragment extends Fragment {
     //Xử lý dữ liệu cho expand list
     private void setExpandList() {
         TabRelativeActivity tabRelativeActivity = new TabRelativeActivity();
-        injections = tabRelativeActivity.xuLyData(dbHelper, idRelative, TabRelativeActivity.MISS);
+        injections = tabRelativeActivity.xuLyData(getContext(), idRelative, TabRelativeActivity.MISS);
 //        Schedule schedule = dbHelper.getScheduleById(idSchedule);
         CustomAdapterInjection customAdapterInjection = new CustomAdapterInjection(getContext(), listHeader, listHashMap);
 
@@ -81,7 +83,7 @@ public class MissedInjectionFragment extends Fragment {
         expandableListView.setAdapter(customAdapterInjection);
         expandableListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
             //Lấy chi tiết lịch tiêm tại vị trí đã chọn
-            DetailSchedule detailSchedule = dbHelper.getDetailScheduleById(idRelative, Objects.requireNonNull(listHashMap.get(listHeader.get(groupPosition))).get(childPosition).getIdInjection());
+            DetailSchedule detailSchedule = schedulePresenter.getDetailSchedule(idRelative, Objects.requireNonNull(listHashMap.get(listHeader.get(groupPosition))).get(childPosition).getIdInjection());
             sendObject(detailSchedule);
             return false;
         });

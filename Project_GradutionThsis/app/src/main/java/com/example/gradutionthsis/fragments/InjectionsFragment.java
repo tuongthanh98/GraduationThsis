@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.example.gradutionthsis.DBHelper;
 import com.example.gradutionthsis.R;
 import com.example.gradutionthsis.activity.DetailInjectionActivity;
 import com.example.gradutionthsis.activity.TabRelativeActivity;
 import com.example.gradutionthsis.adapter.CustomAdapterInjection;
 import com.example.gradutionthsis.dto.DetailSchedule;
 import com.example.gradutionthsis.dto.Injection;
+import com.example.gradutionthsis.presenter.DetailSchedulePresenter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -41,7 +41,8 @@ public class InjectionsFragment extends Fragment {
     private Context mContext;
     private TextView txtUnfinished;
     private ExpandableListView expandableListView;
-    private DBHelper dbHelper;
+
+    DetailSchedulePresenter schedulePresenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,8 +66,9 @@ public class InjectionsFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_injections, container, false);
         mContext = getActivity();
+        schedulePresenter = new DetailSchedulePresenter(getContext());
+
         txtUnfinished = root.findViewById(R.id.textUnfinished);
-        dbHelper = new DBHelper(getContext());
         expandableListView = root.findViewById(R.id.expand_injected);
 
         setExpandList();
@@ -80,14 +82,14 @@ public class InjectionsFragment extends Fragment {
     //Xử lý dữ liệu cho expand list
     private void setExpandList() {
         TabRelativeActivity tabRelativeActivity = new TabRelativeActivity();
-        injections = tabRelativeActivity.xuLyData(dbHelper, idRelative, TabRelativeActivity.COMPLETED);
+        injections = tabRelativeActivity.xuLyData(getContext(), idRelative, TabRelativeActivity.COMPLETED);
         CustomAdapterInjection customAdapterInjection = new CustomAdapterInjection(getContext(), listHeader, listHashMap);
 
         txtUnfinished.setVisibility(View.INVISIBLE);//Ẩn đi textView
         expandableListView.setAdapter(customAdapterInjection);
         expandableListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
             //Lấy chi tiết lịch tiêm tại vị trí đã chọn
-            DetailSchedule detailSchedule = dbHelper.getDetailScheduleById(idRelative, Objects.requireNonNull(listHashMap.get(listHeader.get(groupPosition))).get(childPosition).getIdInjection());
+            DetailSchedule detailSchedule = schedulePresenter.getDetailSchedule(idRelative, Objects.requireNonNull(listHashMap.get(listHeader.get(groupPosition))).get(childPosition).getIdInjection());
             sendObject(detailSchedule);
             return false;
         });

@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.gradutionthsis.activity.AddRelativeActivity;
 import com.example.gradutionthsis.activity.VaccineActivity;
@@ -186,7 +187,8 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.iconAdd) {
             startActivity(new Intent(this, AddRelativeActivity.class));   // Mở activity_relatives thông qua class RelativesActivity
         } else if (item.getItemId() == R.id.iconNotify) {
-            startActivity(new Intent(this, VaccineActivity.class));   // Mở activity_relatives thông qua class RelativesActivity
+//            startActivity(new Intent(this, VaccineActivity.class));   // Mở activity_relatives thông qua class RelativesActivity
+            Toast.makeText(this, "Chức năng này hiện đang được cập nhật ^_^!", Toast.LENGTH_SHORT).show();
         } else {
             result = super.onOptionsItemSelected(item);
         }

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,8 +15,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.gradutionthsis.DBHelper;
-import com.example.gradutionthsis.MainActivity;
 import com.example.gradutionthsis.R;
 import com.example.gradutionthsis.adapter.ViewPagerAdapter;
 import com.example.gradutionthsis.dto.DetailSchedule;
@@ -24,6 +23,8 @@ import com.example.gradutionthsis.dto.Relative;
 import com.example.gradutionthsis.fragments.InjectionsFragment;
 import com.example.gradutionthsis.fragments.MissedInjectionFragment;
 import com.example.gradutionthsis.fragments.UninjectedFragment;
+import com.example.gradutionthsis.presenter.DetailSchedulePresenter;
+import com.example.gradutionthsis.presenter.InjectionPresenter;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.Serializable;
@@ -41,18 +42,18 @@ public class TabRelativeActivity extends AppCompatActivity {
     public static final int COMPLETED = 2;//Danh sách cái mũi đã tiêm
 
     Relative relative;
-    DBHelper dbHelper;
+    DetailSchedulePresenter detailSchedulePresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_relative);
 
-        dbHelper = new DBHelper(this);
-
         ActionBar actionBar = getSupportActionBar();
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.viewpPage);
+
+        detailSchedulePresenter = new DetailSchedulePresenter(this);
 
         relative = reciveObject();
 
@@ -125,35 +126,39 @@ public class TabRelativeActivity extends AppCompatActivity {
      * @date 26/05/2021 : 3h
      */
     //Xứ lý danh sách mũi tiêm
-    public List<Injection> xuLyData(@NonNull DBHelper dbHelper, int idRelative, int type) {
-        List<DetailSchedule> detailSchedules = dbHelper.getDetailSchedulesById(idRelative);
+    public List<Injection> xuLyData(Context context, int idRelative, int type) {
+        DetailSchedulePresenter detailSchedulePresenter = new DetailSchedulePresenter(context);
+        InjectionPresenter injectionPresenter = new InjectionPresenter(context);
+
+
+        List<DetailSchedule> detailSchedules = detailSchedulePresenter.getListByIdRelative(idRelative);
         List<Injection> injections = new ArrayList<>();
 
-        // Xử lý mũi tiêm đã hoàn tất
-        if (type == COMPLETED)
-            for (DetailSchedule detailSchedule : detailSchedules)
-                if (detailSchedule.getStatus() != 0) {
-                    injections.add(dbHelper.getInjectionById(detailSchedule.getIdInjection()));
-                }
+        if (detailSchedules != null){
+            // Xử lý mũi tiêm đã hoàn tất
+            if (type == COMPLETED)
+                for (DetailSchedule detailSchedule : detailSchedules)
+                    if (detailSchedule.getStatus() != 0) {
+                        injections.add(injectionPresenter.getInjectionById(detailSchedule.getIdInjection()));
+                    }
 
-        //Xử lý mũi tiêm chưa hoàn thành đã quá hạn
-        if (type == MISS){
-            for (DetailSchedule detailSchedule : detailSchedules)
-                if (detailSchedule.getStatus() != 1 && compareDate(detailSchedule.getInjectionTime())) {
-                    injections.add(dbHelper.getInjectionById(detailSchedule.getIdInjection()));
-//                    Log.d(TAG, "PASS: " + dbHelper.getInjectionById(detailSchedule.getIdInjection()).toString());
-//                    Log.d(TAG, "\nTime: " + detailSchedule.getInjectionTime());
-                }
+            //Xử lý mũi tiêm chưa hoàn thành đã quá hạn
+            if (type == MISS){
+                for (DetailSchedule detailSchedule : detailSchedules)
+                    if (detailSchedule.getStatus() != 1 && compareDate(detailSchedule.getInjectionTime())) {
+                        injections.add(injectionPresenter.getInjectionById(detailSchedule.getIdInjection()));
+                    }
+            }
+
+            //Xử lý các mũi tiêm sắp tới
+            if (type == UPCOMING)
+                for (DetailSchedule detailSchedule : detailSchedules)
+                    if (detailSchedule.getStatus() != 1 && !compareDate(detailSchedule.getInjectionTime())) {
+                        injections.add(injectionPresenter.getInjectionById(detailSchedule.getIdInjection()));
+                    }
+            return injections;
         }
-
-        //Xử lý các mũi tiêm sắp tới
-        if (type == UPCOMING)
-            for (DetailSchedule detailSchedule : detailSchedules)
-                if (detailSchedule.getStatus() != 1 && !compareDate(detailSchedule.getInjectionTime())) {
-                    injections.add(dbHelper.getInjectionById(detailSchedule.getIdInjection()));
-//                    Log.d(TAG, "UPCOMING: " + dbHelper.getInjectionById(detailSchedule.getIdInjection()).toString());
-                }
-        return injections;
+        return null;
     }
 
 
